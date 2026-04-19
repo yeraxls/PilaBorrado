@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario ASP</title>
+    <script src="~/js/undo-form.js"></script>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            background: #f5f5f5;
+            padding: 40px
+        }
+
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.08)
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 600
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box
+        }
+
+        button {
+            margin-top: 18px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #111;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Formulario</h2>
+        <form method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" />
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" />
+
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="0" />
+
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+    
+    <script>
+        activarUndoFormulario();
+    </script>
+</body>
+</html>
